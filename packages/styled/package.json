@@ -1,0 +1,22 @@
+{
+  "name": "@cogoport/styled",
+  "version": "1.0.0",
+  "description": "styled components for front",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -w -c rollup.config.js",
+    "cleanup": "rm -rf ./dist/ && mkdir ./dist",
+    "build": "yarn cleanup && rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "@cogoport/eslint-config": "^1.0.6",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-multi-entry": "^4.1.0",
+    "eslint": "^8.23.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "dependencies": {
+    "emotion": "^11.0.0"
+  }
+}

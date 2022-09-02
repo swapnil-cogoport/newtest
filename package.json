@@ -1,0 +1,10 @@
+{
+  "name": "packages-core",
+  "version": "1.0.0",
+  "description": "monorepo for core packages",
+  "workspaces": ["packages/*"],
+  "repository": "git@github.com:Cogoport/packages-core.git",
+  "author": "Rudraprasad Das <brayn003@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
