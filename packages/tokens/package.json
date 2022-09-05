@@ -2,10 +2,37 @@
   "name": "@cogoport/tokens",
   "version": "1.0.0",
   "description": "Simple elements for react",
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
   "author": "Rudraprasad Das <brayn003@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "rollup -w -c rollup.config.js",
+    "cleanup": "rm -rf ./dist/ && mkdir ./dist",
+    "build": "yarn cleanup && rollup -c rollup.config.js"
+  },
   "devDependencies": {
-    "rollup": "^2.79.0"
+    "@cogoport/eslint-config": "^1.0.6",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.4.0",
+    "@types/react": "^18.0.18",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.33.0",
+    "typescript": "^4.8.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }
