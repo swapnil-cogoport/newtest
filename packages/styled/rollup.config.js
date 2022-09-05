@@ -1,16 +1,20 @@
-const commonjs = require('@rollup/plugin-commonjs');
-const multi = require('@rollup/plugin-multi-entry');
-const peerDepsExternal = require('rollup-plugin-peer-deps-external');
+import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
-module.exports = {
-	input  : ['src/**/*.{js}'],
+export default {
+	input  : ['src/index.js'],
 	output : [
-		{ dir: 'dist/esm', format: 'es' },
+		{ dir: 'dist/es', format: 'es' },
 		{ dir: 'dist/cjs', format: 'cjs', exports: 'auto' },
 	],
 	plugins: [
 		peerDepsExternal(),
 		commonjs(),
-		multi(),
+		copy({
+			targets: [
+				{ src: './package.json', dest: 'dist' },
+			],
+		}),
 	],
 };
