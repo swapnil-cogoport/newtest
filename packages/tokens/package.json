@@ -37,5 +37,7 @@
   "peerDependencies": {
     "react": "^18.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "postcss-nested": "^5.0.6"
+  }
 }

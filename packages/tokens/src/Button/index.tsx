@@ -4,7 +4,9 @@ import styles from './styles.module.css';
 
 function Button() {
 	return (
-		<div style={styles.container}>Button</div>
+		<div className={styles.container}>
+			<div className={styles.inner_container} />
+		</div>
 	);
 }
 

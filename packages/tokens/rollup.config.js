@@ -1,5 +1,6 @@
 import path from 'path';
 
+import postcssNested from 'postcss-nested';
 import copy from 'rollup-plugin-copy';
 import postcss from 'rollup-plugin-postcss';
 import renameNodeModules from 'rollup-plugin-rename-node-modules';
@@ -29,13 +30,13 @@ export default [
 		],
 		external : ['react'],
 		plugins  : [
-			postcss({ modules: true }),
+			postcss({ modules: true, plugins: [postcssNested] }),
 			typescript({
 				useTsconfigDeclarationDir : true,
 				tsconfig                  : 'tsconfig.json',
 				tsconfigOverride          : { compilerOptions: { declarationDir: 'dist/types' } },
 			}),
-			terser(),
+			// terser(),
 			renameNodeModules('_vendors'),
 			copy({ targets: [{ src: './package.json', dest: 'dist' }] }),
 			summary({
