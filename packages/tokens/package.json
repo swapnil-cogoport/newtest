@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "rollup -w -c rollup.config.js",
     "cleanup": "rm -rf ./dist/ && mkdir ./dist",
-    "build": "yarn cleanup && rollup -c rollup.config.js"
+    "build": "yarn cleanup && NODE_ENV=production rollup -c rollup.config.js"
   },
   "devDependencies": {
     "@cogoport/eslint-config": "^1.0.6",
@@ -24,12 +24,12 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-import-resolver-typescript": "^3.5.0",
     "rollup": "^2.79.0",
-    "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-summary": "^1.4.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.33.0",
     "typescript": "^4.8.2"
