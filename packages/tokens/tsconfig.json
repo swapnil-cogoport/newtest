@@ -6,6 +6,7 @@
   ],
   "exclude": ["dist"],
   "compilerOptions": {
+      "plugins": [{ "name": "typescript-plugin-css-modules" }],
       "target": "ES2016", 
       "typeRoots": ["node_modules/@types"],
       // "lib": [],
