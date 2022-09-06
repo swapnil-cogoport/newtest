@@ -53,6 +53,22 @@
     eslint-plugin-react "^7.30.1"
     eslint-plugin-react-hooks "^4.6.0"
 
+"@cogoport/eslint-config@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@cogoport/eslint-config/-/eslint-config-1.0.7.tgz#4ce5173b28c8019b778f510f5874a3bfa6798ce1"
+  integrity sha512-Y0jT6LkgK28+EMQU4W28UMWbnMaBvR990Y4Z8b2l1ZeHkhYN15WXPoO28aJMRHnNY6InHO6ObVpGKUR/UiN49A==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^5.36.2"
+    "@typescript-eslint/parser" "^5.36.2"
+    eslint "^8.22.0"
+    eslint-config-airbnb "^19.0.4"
+    eslint-config-airbnb-base "^15.0.0"
+    eslint-import-resolver-custom-alias "^1.3.0"
+    eslint-plugin-import "^2.26.0"
+    eslint-plugin-jsx-a11y "^6.6.1"
+    eslint-plugin-react "^7.30.1"
+    eslint-plugin-react-hooks "^4.6.0"
+
 "@colors/colors@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"

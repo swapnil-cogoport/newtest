@@ -21,6 +21,6 @@
 
       /* Type Checking */
       "strict": true,
-      "noImplicitAny": true,
+      "noImplicitAny": true
     }
 }
