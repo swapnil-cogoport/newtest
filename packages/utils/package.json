@@ -1,8 +1,0 @@
-{
-  "name": "@cogoport/utils",
-  "version": "1.0.0",
-  "description": "simple utils for your frontend project",
-  "main": "index.js",
-  "author": "Rudraprasad Das <brayn003@gmail.com>",
-  "license": "MIT"
-}
