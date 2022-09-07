@@ -1,0 +1,21 @@
+.ui-container-button {
+    &.preset-size-sm {
+        height: 30px;
+    }
+    
+    &.preset-size-md {
+        height: 40px;
+    }
+
+    &.preset-size-lg {
+        height: 50px;
+    }
+
+    &.preset-bg-primary {
+        color: blue;
+    }
+
+    &.preset-bg-secondary {
+        color: lightgray;
+    }
+}

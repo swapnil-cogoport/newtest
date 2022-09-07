@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "rollup -w -c rollup.config.js",
     "cleanup": "rm -rf ./dist/ && mkdir ./dist",
-    "build": "yarn cleanup && NODE_ENV=production rollup -c rollup.config.js"
+    "build": "yarn cleanup && NODE_ENV=production rollup -c rollup.config.js",
+    "cosmos": "cosmos",
+    "cosmos:export": "cosmos-export"
   },
   "devDependencies": {
     "@cogoport/eslint-config": "^1.0.7",
@@ -24,6 +26,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-import-resolver-typescript": "^3.5.0",
     "postcss": "^8.4.16",
+    "react-cosmos": "^5.7.2",
     "rollup": "^2.79.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.2",

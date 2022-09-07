@@ -4,5 +4,8 @@ module.exports = {
 		project         : './tsconfig.json',
 		tsconfigRootDir : __dirname,
 	},
-	ignorePatterns: ['dist/**/*'],
+	ignorePatterns : ['dist/**/*'],
+	rules          : {
+		'react/require-default-props': 'off',
+	},
 };
