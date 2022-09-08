@@ -1,13 +1,12 @@
 import path from 'path';
 
-// import postcssNested from 'postcss-nested';
-import copy from 'rollup-plugin-copy';
+import postcssNested from 'postcss-nested';
+import del from 'rollup-plugin-delete';
 import postcss from 'rollup-plugin-postcss';
 import renameNodeModules from 'rollup-plugin-rename-node-modules';
 import summary from 'rollup-plugin-summary';
-// import { terser } from 'rollup-plugin-terser';
-// import typescript from 'rollup-plugin-typescript2';
-import { swc } from 'rollup-plugin-swc3';
+import { terser } from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
 export default [
 	{
@@ -31,16 +30,15 @@ export default [
 		],
 		external : ['react'],
 		plugins  : [
-			postcss(),
-			swc({ minify: true, sourceMaps: true, jsc: { minify: { sourceMap: true } } }),
-			// typescript({
-			// 	useTsconfigDeclarationDir : true,
-			// 	tsconfig                  : 'tsconfig.json',
-			// 	tsconfigOverride          : { compilerOptions: { declarationDir: 'dist/types' } },
-			// }),
-			// terser(),
+			del({ targets: 'dist/*' }),
+			postcss({ modules: true, plugins: [postcssNested] }),
+			typescript({
+				useTsconfigDeclarationDir : true,
+				tsconfig                  : 'tsconfig.json',
+				tsconfigOverride          : { compilerOptions: { declaration: true, declarationDir: 'dist/types' } },
+			}),
+			terser(),
 			renameNodeModules('_vendors'),
-			copy({ targets: [{ src: './package.json', dest: 'dist' }] }),
 			summary({
 				showMinifiedSize : true,
 				showGzippedSize  : true,

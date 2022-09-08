@@ -1,0 +1,16 @@
+{
+  "name": "@cogoport/components",
+  "version": "1.0.0",
+  "description": "React component library with bare minimum styling",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
+  "author": "Rudraprasad Das <brayn003@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=production cosmos",
+    "cleanup": "rm -rf ./dist/ && mkdir ./dist",
+    "build": "NODE_ENV=production rollup -c rollup.config.js"
+  },
+  "browser": true
+}

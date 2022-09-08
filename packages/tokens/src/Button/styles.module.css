@@ -1,9 +1,9 @@
 .container {
-    height: 40px;
-    width: 200px;
-    background-color: white;
+	width: 200px;
+	height: 40px;
+	background-color: white;
 
-    .inner_container {
-        color: red;
-    }
+	.inner_container {
+		color: red;
+	}
 }

@@ -4,14 +4,12 @@ import cl from '../utils/classname-processor';
 
 import styles from './styles.module.css';
 
-console.log(styles);
-
 interface ButtonProps {
 	/** classname for the root element  */
 	className?: string;
 	size?: string;
 	bg?: string;
-	children?: JSX.Element | null;
+	children?: React.ReactNode;
 }
 /**
  * Button Component that begs to be clicked!
@@ -32,7 +30,9 @@ function Button({
 				${cl.preset('bg', bg)}`}
 			type="button"
 		>
-			{children}
+			<div className={styles.inner_container}>
+				{children}
+			</div>
 		</button>
 	);
 }

@@ -1,21 +1,25 @@
-.ui-container-button {
-    &.preset-size-sm {
-        height: 30px;
-    }
-    
-    &.preset-size-md {
-        height: 40px;
-    }
+.ui_container_button {
+	&.preset_size {
+		&_sm {
+			height: 30px;
+		}
 
-    &.preset-size-lg {
-        height: 50px;
-    }
+		&_md {
+			height: 40px;
+		}
 
-    &.preset-bg-primary {
-        color: blue;
-    }
+		&_lg {
+			height: 50px;
+		}
+	}
 
-    &.preset-bg-secondary {
-        color: lightgray;
-    }
+	&.preset_bg {
+		&_primary {
+			background-color: blue;
+		}
+
+		&_secondary {
+			background-color: lightgray;
+		}
+	}
 }

@@ -4,24 +4,24 @@ module.exports = {
 		rules: [
 			{
 				test    : /\.(js|ts|tsx)$/,
-				exclude : /(node_modules)/,
-				use     : {
-					loader: 'swc-loader',
-					// options : { minify: true, sourceMaps: true, jsc: { minify: { sourceMap: true } } },
-				},
+				exclude : /node_modules/,
+				use     : 'swc-loader',
 			},
 			{
 				test    : /\.css$/i,
-				exclude : /(node_modules)/,
+				exclude : /node_modules/,
 				use     : [
 					'style-loader',
-					'css-loader',
-					'postcss-loader',
+					{ loader: 'css-loader', options: { modules: true, importLoaders: 1 } },
+					{ loader: 'postcss-loader', options: { postcssOptions: { plugins: ['postcss-nested'] } } },
 				],
 			},
 		],
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
+	},
+	performance: {
+		hints: false,
 	},
 };

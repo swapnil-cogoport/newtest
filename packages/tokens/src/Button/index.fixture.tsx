@@ -1,11 +1,11 @@
-/* eslint-disable import/no-useless-path-segments */
 import React from 'react';
 
 import Button from './index';
 
-// export default <Button><span>Click Me!</span></Button>;
 export default (
-	<Button>
-		<span>This is a button</span>
-	</Button>
+	<>
+		<Button>This is a button 3</Button>
+		<Button size="md">This is a button 3</Button>
+		<Button size="lg">This is a button 3</Button>
+	</>
 );
